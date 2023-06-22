@@ -1,0 +1,41 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para el encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #972204;
+}
+
+header div img {
+  height: 50px;
+}
+
+header nav a {
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+header .social-icons img {
+  height: 30px;
+  margin-left: 10px;
+}
+body {
+  background-image: url("../img/navidad.jpg") ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+  
+  
