@@ -11,7 +11,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #972204;
+  background-color: #c3000d;
 }
 
 .logoimage {
@@ -72,7 +72,68 @@ header .social-icons img {
   margin-left: 10px;
 }
 body {
-  background-image: url("../img/navidad.jpg");
+  background-image: url("../img/login.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+h1 {
+  font-size: 50px;
+  margin-top: 0;
+  text-align: center;
+}
+
+/* Estilos específicos para la página de pedidos */
+.section-pedidos {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+.productos-catalogo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 52px; /* Ajusta el valor del margen izquierdo según tu preferencia */
+}
+
+.section-pedidos .image-gallery img {
+  display: block;
+  margin-bottom: 10px;
+}
+.titulo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 300px; /* Ajusta el valor de la posición vertical según tu preferencia */
+  margin: 0;
+}
+.titulo2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 200px; /* Ajusta el valor de la posición vertical según tu preferencia */
+  margin: 0;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.image-gallery img {
+  max-width: 400px; /* Ajusta el tamaño máximo según tus necesidades */
+  height: auto; /* Para mantener la proporción de la imagen */
+  margin: 10px; /* Ajusta el valor del margen según tu preferencia */
+}
+
+.item-name {
+  margin: 10px;
+  margin-top: 5px;
+}
+
+.item-price {
+  margin: 10px;
+  margin-top: 5px;
 }
