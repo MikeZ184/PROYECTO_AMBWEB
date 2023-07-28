@@ -3,22 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <title>Distribuidora Noche Buena</title>
-    <link rel="stylesheet" href="/PROYECTO_AMBWEB/css/ofertas.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/ofertas.css" />
   </head>
   <body>
     <header>
       <div class="logoimage">
-        <img src="/PROYECTO_AMBWEB/img/Logo Proyecto.jpg" alt="Logo Proyecto" />
+        <img src="../img/Logo Proyecto.jpg" alt="Logo Proyecto" />
       </div>
 
       <nav class="navbar">
         <ul class="navbar-list">
-          <li class="navbar-item"><a href="#">Pedidos</a></li>
-          <li class="navbar-item"><a href="#">Catálogo</a></li>
+          <li class="navbar-item"><a href="pedidos.html">Pedidos</a></li>
+          <li class="navbar-item"><a href="catalogo.html">Catálogo</a></li>
           <li class="navbar-item"><a href="ofertas.html">Ofertas</a></li>
-          <li class="navbar-item"><a href="#">Eventos</a></li>
-          <li class="navbar-item"><a href="#">Sobre Nosotros</a></li>
+          <li class="navbar-item"><a href="eventos.html">Eventos</a></li>
+          <li class="navbar-item"><a href="acercade.html">Sobre Nosotros</a></li>
           <li class="navbar-item"><a href="contacto.html">Contacto</a></li>
+          <li class="navbar-item"><a href="eventos.html">Eventos</a></li>
+          <li class="navbar-item"><a href="contacto.html">Compras</a></li>
         </ul>
 
         <div class="social-icons">
@@ -36,21 +39,103 @@
       <div class="descuentos">
         <h2>Descuentos</h2>
 
-        <div class="descimg">
+        <!-- <div class="descimg">
           <a href="#"><img src="../img/descuentos.jpg" alt="Descuentos" /></a>
           <a href="#"><img src="../img/descuentos.jpg" alt="Descuentos2" /></a>
           <a href="#"><img src="../img/descuentos.jpg" alt="Descuentos3" /></a>
+        </div> -->
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="../img/descuentos.jpg" alt="Descuentos1" class="d-block w-100">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Descuento 1</h5>
+                <p>Aplican restricciones</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="../img/descuentos.jpg" alt="Descuentos2" class="d-block w-100">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Descuento 2</h5>
+                <p>Solo de Lunes a Viernes</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../img/descuentos.jpg" alt="Descuentos3" class="d-block w-100" >
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Descuento 3</h5>
+                <p>Solo fines de semana</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
 
       <div class="regalias">
         <h2>Regalías</h2>
 
-        <div class="regaimg">
+        <!-- <div class="regaimg">
           <a href="#"><img src="../img/regalias.jpg" alt="regalias" /></a>
           <a href="#"><img src="../img/regalias.jpg" alt="regalias2" /></a>
+        </div> -->
+
+        <div id="carouselExampleDark2" class="carousel carousel-dark slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="../img/regalias.jpg" alt="regalias1" class="d-block w-100">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Regalía 1</h5>
+                <p>Por la compra de 10000 colones en pan de trigo</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="../img/regalias.jpg" alt="regalias2" class="d-block w-100">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Regalía 2</h5>
+                <p>Por la compra de 15000 colones en lacteos</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../img/regalias.jpg" alt="regalias3" class="d-block w-100" >
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Regalía 3</h5>
+                <p>Por la compra de 5000 colones en donas</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
+
       </div>
     </div>
+
+    <footer class="footer">Proyecto Desarrollo Web</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
 </html>
