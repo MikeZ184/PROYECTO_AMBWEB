@@ -1,6 +1,113 @@
+/* Estilos para el encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #417558;
+}
+
+.logoimage {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logoimage img {
+  height: 50px;
+  margin: 0 10px;
+  width: 100px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 70px;
+}
+
+.navbar a:hover {
+  background-color: #b9b9b9;
+  border-radius: 5px;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 0 10px;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: white; /* Color blanco para el texto */
+}
+
+header div img {
+  height: 50px;
+}
+
+header nav a {
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+header .social-icons img {
+  height: 30px;
+  margin-left: 10px;
+}
+
+h1 {
+  font-size: 50px;
+  margin-top: 0;
+  text-align: center;
+}
+
 .table {
   justify-content: center;
   margin-top: 200px;
   align-items: center;
   
+}
+
+
+/* Estilos para el contenido en la tabla */
+.white-text {
+  color: #000000; /* Texto en blanco */
+}
+
+/* Estilos para la tabla */
+.table-styled {
+  justify-content: center;
+  margin-top: 200px;
+  align-items: center;
+}
+
+/* Estilos para los encabezados de la tabla (th) */
+.table-styled th {
+  background-color: #333; /* Fondo gris oscuro */
+  color: #070707; /* Texto en blanco */
+}
+
+/* Estilos para las celdas de la tabla (td) */
+.table-styled td {
+  background-color: #555; /* Fondo gris más claro */
+  color: #030303; /* Texto en blanco */
+}
+.footer{
+  
+  padding: 20px;
+  margin-top: 50px;
+  background-color: #417558;
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+
 }

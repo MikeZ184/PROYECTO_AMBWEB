@@ -1,17 +1,80 @@
-/* Estilos generales */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
-
 /* Estilos para el encabezado */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #972204;
+  background-color: #417558;
+}
+.logoimage {
+  display: flex;
+  justify-content: flex-start;
+}
+.logoimage img {
+  height: 50px;
+  margin: 0 10px;
+  width: 100px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 70px;
+}
+.navbar a:hover {
+  background-color: #b9b9b9;
+  border-radius: 5px;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 0 10px;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: white; /* Color blanco para el texto */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0 10px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  height: 30px;
+}
+header div img {
+  height: 50px;
+}
+
+header nav a {
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+header .social-icons img {
+  height: 30px;
+  margin-left: 10px;
+}
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 .logoimage {
@@ -65,10 +128,8 @@ body {
 }
 
 .contenido{
-
   display: flex;
   justify-content: center;
-
 }
 
 .contenedor {
@@ -79,11 +140,9 @@ body {
 }
 
 .contenedor img {
-
   height: 200px;
   width: 1500px;
   padding: 15px;
-
 }
 
 .texto {
@@ -98,18 +157,16 @@ body {
 }
 
 .redes{
-
   display: flex;
   justify-content: center;
   margin: 0 20px;
-  margin-top: 50px;
-
+  margin-top: 100px;
 }
 
 .cuadro-izquierda {
-  background-color: #F7FCDC;
+  background-color: #61ac72;
   font-weight: bold;
-  color: #F3DA7D;
+  color: #ffffff;
   padding: 10px;
   text-align: center;
   width: 300px;
@@ -130,45 +187,76 @@ body {
 }
 
 .linea-vertical {
-  border-left: 3px solid #972204;
+  border-left: 3px solid #000000;
   height: 170px;
 }
 
 .info-redes{
-
   display: flex;
   justify-content: space-between;
   margin: 25px 50px;
-
 }
 
 .insta{
-
   display: flex;
   flex-direction: column;
-
 }
 
 .insta h2{
-
-  color: #F3DA7D;
+  color: #299e42;
   display: flex;
   justify-content: center;
-
 }
 
 .face{
-
   margin: 0 50px;
   display: flex;
   flex-direction: column;
-
 }
 
 .face h2{
-
-  color: #F3DA7D;
+  color: #299e42;
   display: flex;
   justify-content: center;
-
 }
+
+/* Estilos para la imagen de fondo */
+img {
+  width: 90%;
+  height: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 10 auto; /* Centra horizontalmente la imagen dentro del contenedor */
+}
+
+.superpuesto {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 0; /* Ajusta el valor de top a 0 para superponer el título en la parte superior */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110%;
+  background-color: rgba(168, 168, 168, 0.7);
+  padding: 74px;
+  border-radius: 5px;
+  box-sizing: inherit;
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+}
+
+.redes + .redes {
+  margin-top: 0;
+}
+.footer{
+  
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #417558;
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+  
+  }

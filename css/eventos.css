@@ -5,20 +5,19 @@ body {
     font-family: Arial, sans-serif;
   }
   
-  /* Estilos para el encabezado */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #972204;
-  }
+ /* Estilos para el encabezado */
+ header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #417558;
+}
   
   .logoimage {
     display: flex;
     justify-content: flex-start;
   }
-  
   .logoimage img {
     height: 50px;
     margin: 0 10px;
@@ -28,6 +27,15 @@ body {
   .navbar {
     display: flex;
     justify-content: center;
+  }
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 70px;
+  }
+  .navbar a:hover {
+    background-color: #b9b9b9;
+    border-radius: 5px;
   }
   
   .navbar-list {
@@ -57,9 +65,22 @@ body {
   .social-icons img {
     height: 30px;
   }
+  header div img {
+    height: 50px;
+  }
+  
+  header nav a {
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  
+  header .social-icons img {
+    height: 30px;
+    margin-left: 10px;
+  }
   
   body {
-    background-color: white;
+    
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -137,7 +158,7 @@ body {
   
     padding: 20px;
     margin-top: 50px;
-    background-color: #972204;
+    background-color: #417558;
     display: flex;
     justify-content: center;
     color: aliceblue;
@@ -153,26 +174,27 @@ body {
     overflow: hidden; /* Evita que el contenido exceda el contenedor */
   }
   
-  /* Estilos para la imagen de fondo */
+  /* Estilos para la imagen de fondo csss */
   img {
-    width: 90%;
+    width: 150%;
     height: 50%;
     object-fit: cover;
     display: block;
-    margin: 0 auto; /* Centra horizontalmente la imagen dentro del contenedor */
+    
   }
   
   /* Estilos para la superposición con el título */
 .superpuesto {
+  color: rgb(255, 255, 255);
     position: absolute;
     top: 0; /* Ajusta el valor de top a 0 para superponer el título en la parte superior */
     left: 50%;
     transform: translateX(-50%);
-    width: 95%;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 90px;
+    width: 110%;
+    background-color: rgba(46, 46, 46, 0.7);
+    padding: 81px;
     border-radius: 5px;
-    box-sizing: border-box;
+    box-sizing: inherit;
     text-align: center;
   }
   

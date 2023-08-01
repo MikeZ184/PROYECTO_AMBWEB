@@ -1,74 +1,139 @@
-#contenedor {
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para el encabezado */
+header {
   display: flex;
-  flex-wrap: wrap;
-  padding: 10px 25px 25px 25px;
-  align-items: center;
   justify-content: space-between;
-  margin: 0 60px 20px 60px;
-}
-.about {
-  text-align: center;
-  color: white;
-  background-color: #49a549; /* Cambia el color de fondo a tu elección */
-  padding: 20px; /* Ajusta el relleno según tus preferencias */
+  align-items: center;
+  padding: 20px;
+  background-color: #417558;
 }
 
-#contenedor1 {
-  max-width: 600px;
-}
-
-.imagen {
-  width: 350px; /* Ajusta el ancho de la imagen según tus necesidades */
-}
-
-#contenedor1 h2,
-#contenedor1 p {
-  margin-left: 160px; /* Ajusta el valor según el ancho de la imagen y el margen derecho */
-}
-
-  #contenedor2 {
-    max-width: 450px;
-    
-  }
-
-
-#contenedor3 {
-  justify-content: center;
-  background-color: #d06969; /* Cambia el color de fondo a tu elección */
-  margin-top: 15px;
-  padding: 10px;
-}
-
-#contenedor3 p {
-  color: white; /* Establece el color del texto en blanco */
-}
-
-#contenedor3 h2{
-  color: white;
-  padding-left: 100PX;
-}
-
-.vision {
-  padding: 0 30px 0 30px;
-}
-
-.contenedoracerca{
+.logoimage {
   display: flex;
+  justify-content: flex-start;
+}
+.logoimage img {
+  height: 50px;
+  margin: 0 10px;
+  width: 100px;
 }
 
-/*
-.espacio-texto {
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 70px;
+}
+.navbar a:hover {
+  background-color: #b9b9b9;
   border-radius: 5px;
 }
 
-.espacio-texto h2 {
-  color: #333;
+.navbar-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
 }
 
-.espacio-texto p {
-  color: #666;
+.navbar-item {
+  margin: 0 10px;
 }
-*/
+
+.navbar-item a {
+  text-decoration: none;
+  color: white; /* Color blanco para el texto */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0 10px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  height: 30px;
+}
+header div img {
+  height: 50px;
+}
+
+header nav a {
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+header .social-icons img {
+  height: 30px;
+  margin-left: 10px;
+}
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+.logoimage img {
+  height: 50px;
+  margin: 0 10px;
+  width: 100px;
+}
+
+/* Estilos para el contenido */
+.container {
+  padding: 30px 0;
+}
+
+.about {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: white;
+  background-color: #bd5151;
+  padding: 20px;
+}
+
+.container img {
+  width: 100%;
+  max-width: 500px;
+}
+
+#contenedor1 h2,
+#contenedor2 h2,
+#contenedor3 h2 {
+  color: white;
+}
+
+.vision {
+  padding: 0 30px;
+}
+.col-md-6 img {
+  padding-right: 5%;
+  padding-left: 25%;
+  width: 80%; /* La imagen ocupará el 100% del ancho del contenedor */
+  height: auto; /* La altura se ajustará automáticamente para mantener la proporción original */
+  max-width: 100%; /* Evita que la imagen supere el ancho del contenedor */
+  display: block; /* Establece la imagen como un bloque para evitar problemas de alineación */
+}
+.footer{
+  
+  padding: 20px;
+  margin-top: 50px;
+  background-color: #417558;
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+
+}

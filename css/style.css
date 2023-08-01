@@ -3,6 +3,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  background-image: url("../img/catalogo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Estilos para el encabezado */
@@ -11,14 +14,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #c3000d;
+  background-color: #417558;
 }
-
 .logoimage {
   display: flex;
   justify-content: flex-start;
 }
-
 .logoimage img {
   height: 50px;
   margin: 0 10px;
@@ -28,6 +29,15 @@ header {
 .navbar {
   display: flex;
   justify-content: center;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 70px;
+}
+.navbar a:hover {
+  background-color: #b9b9b9;
+  border-radius: 5px;
 }
 
 .navbar-list {
@@ -72,7 +82,7 @@ header .social-icons img {
   margin-left: 10px;
 }
 body {
-  background-image: url("../img/login.jpg");
+  background-image: url("../img/inicio.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -101,17 +111,19 @@ h1 {
   margin-bottom: 10px;
 }
 .titulo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 300px; /* Ajusta el valor de la posición vertical según tu preferencia */
-  margin: 0;
-}
-.titulo2 {
+  color: #f9f9f9;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 200px; /* Ajusta el valor de la posición vertical según tu preferencia */
+  margin: 0;
+}
+.titulo2 {
+  color: #f9f9f9;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 110px; /* Ajusta el valor de la posición vertical según tu preferencia */
   margin: 0;
 }
 
@@ -136,4 +148,22 @@ h1 {
 .item-price {
   margin: 10px;
   margin-top: 5px;
+}
+/* Estilos para el cuerpo con clase "custom-body" */
+.custom-body {
+ 
+  background-image: url("../img/");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer{
+  
+  padding: 20px;
+  margin-top: 50px;
+  background-color: #417558;
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+
 }

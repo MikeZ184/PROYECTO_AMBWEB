@@ -1,65 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Distribuidora Noche Buena</title>
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/acercade.css" />
-  </head>
-  <body>
-    <header>
-      <div class="logoimage">
-        <img src="img/Logo Proyecto.jpg" alt="Logo Proyecto" />
+<head>
+  <meta charset="UTF-8" />
+  <title>Distribuidora Noche Buena</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/acercade.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <a href="index.html" class="active">
+        <img src="../img/log.png" alt="Logo de la página" />
+      </a>
+    </div>
+    <nav class="navbar">
+      <a href="/html/pedidos.html">Pedidos</a>
+      <a href="/html/catalogo.html">Catálogo</a>
+      <a href="/html/ofertas.html">Ofertas</a>
+      <a href="/html/eventos.html">Eventos</a>
+      <a href="/html/contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <strong><h1 class="about">Sobre Nosotros</h1></strong>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../img/acercade.png" alt="Logo de la página"   />
       </div>
-
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="navbar-item"><a href="#">Pedidos</a></li>
-          <li class="navbar-item"><a href="#">Catálogo</a></li>
-          <li class="navbar-item"><a href="ofertas.html">Ofertas</a></li>
-          <li class="navbar-item"><a href="#">Eventos</a></li>
-          <li class="navbar-item"><a href="#">Sobre Nosotros</a></li>
-          <li class="navbar-item"><a href="contacto.html">Contacto</a></li>
-        </ul>
-
-        <div class="social-icons">
-          <a href="#"
-            ><img src="img/instagram.png.png" alt="Logo de Instagram"
-          /></a>
-          <a href="#"><img src="img/facebook.png" alt="Logo de Facebook" /></a>
-        </div>
-      </nav>
-    </header>
-    <body>
-      <h1 class="about">Sobre Nosotros</h1>
-      <div id="contenedor">
-        <img src="img/acercade1.jpeg" alt="Imagen" class="imagen" />
-
-        <div id="contenedor1">
-          <h2>Nuestra Historia</h2>
-          <p>
-            Nuestra historia inicia cuando William Flores y su esposa Yadira
-            Vargas, creadores del emprendimiento por primera vez en su vida se
-            dedica a vender productos alimenticios por los años 90’s luego de
-            que sus 4 hijos lograran terminar la escuela y ellos tuvieran que
-            generar un nuevo ingreso para su familia. Formando a sus 4 hijos con
-            una mentalidad trabajadora y de siempre salir adelante, años después
-            se dedican solamente a la venta de productos navideños en los
-            últimos meses de cada año incluyendo a sus nietos y todos los
-            miembros de la familia a esta bonita pequeña empresa familiar.
-          </p>
-        </div>
-        <div id="contenedor2">
-          <h2>Misión</h2>
-          <p>
-            Nuestra misión es ofrecer alimentos sabrosos y saludables,
-            especialmente de origen europeo, de alta calidad y que generen gran
-            satisfacción a los consumidores.
-          </p>
-        </div>
+      <div class="col-md-6">
+        <h2>Nuestra Historia</h2>
+        <p>
+          Nuestra historia inicia cuando William Flores y su esposa Yadira
+          Vargas, creadores del emprendimiento por primera vez en su vida se
+          dedica a vender productos alimenticios por los años 90’s luego de
+          que sus 4 hijos lograran terminar la escuela y ellos tuvieran que
+          generar un nuevo ingreso para su familia. Formando a sus 4 hijos con
+          una mentalidad trabajadora y de siempre salir adelante, años después
+          se dedican solamente a la venta de productos navideños en los
+          últimos meses de cada año incluyendo a sus nietos y todos los
+          miembros de la familia a esta bonita pequeña empresa familiar.
+        </p>
       </div>
-
-      <div id="contenedor3">
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Misión</h2>
+        <p>
+          Nuestra misión es ofrecer alimentos sabrosos y saludables,
+          especialmente de origen europeo, de alta calidad y que generen gran
+          satisfacción a los consumidores.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
         <h2>Visión</h2>
         <p class="vision">
           Ser el proveedor de productos navideños alimenticios valorado por los
@@ -68,6 +63,12 @@
           comparación a la del mercado.
         </p>
       </div>
-    </body>
-  </body>
+    </div>
+  </div>
+
+  <!-- Scripts o enlaces a archivos JS aquí si es necesario -->
+  <footer class="footer">Proyecto Desarrollo Web</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
 </html>
