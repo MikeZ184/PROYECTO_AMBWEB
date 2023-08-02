@@ -1,241 +1,86 @@
-CREATE DATABASE `distribuidora` ;
-
-CREATE TABLE distribuidora.carrito (
-
-  `id_carrito` int NOT NULL AUTO_INCREMENT,
-
-  `nombre` varchar(20) COLLATE utf8mb4_eo_0900_ai_ci NOT NULL,
-
-  `apellidos` varchar(30) COLLATE utf8mb4_eo_0900_ai_ci NOT NULL,
-
-  `producto` varchar(25) COLLATE utf8mb4_eo_0900_ai_ci DEFAULT NULL,
-
-  `precio` double NOT NULL,
-
-  PRIMARY KEY (`id_carrito`)
-
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_eo_0900_ai_ci;
-
-
-CREATE TABLE `distribuidora`.`articulo` ( --Le falta precio
-
-  `idArticulo` INT NOT NULL,
-
-  `nombreArticulo` VARCHAR(45) NOT NULL);
-
-)
-
-
-CREATE TABLE distribuidora.compras ( --Agregar foreign de articulos id, nombre, precio / para realizar consultas
-
-  `id_compras` int NOT NULL AUTO_INCREMENT,
-
-  `cliente` varchar(30) NOT NULL,
-
-  `monto` varchar(30) NOT NULL,
-
-  `fecha` varchar(30) NOT NULL,
-
-  PRIMARY KEY (`id_venta`)
-
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
-
-CREATE TABLE distribuidora.ventas ( --Agregar foreign de articulos para el id
-
-  `id_venta` int NOT NULL AUTO_INCREMENT,
-
-  `cliente` varchar(30) NOT NULL,
-
-  `monto` varchar(30) NOT NULL,
-
-  `fecha` varchar(30) NOT NULL,
-
-  PRIMARY KEY (`id_venta`)
-
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
-
-create table distribuidora.usuario(
-
-  id_usuario INT NOT NULL AUTO_INCREMENT,
-
-  correo varchar(20),
-
-  password varchar(200),
-
-PRIMARY KEY (id_usuario)
-
-)ENGINE = InnoDB
-
-DEFAULT CHARACTER SET = utf8mb4
-
-COLLATE = utf8mb4_eo_0900_ai_ci;
-
- 
-
-insert into distribuidora.usuario (id_usuario, username, password) values
-
-(1,'Yeikel','$2a$10$P1.w58XvnaYQUQgZUCk4aO/RTRl8EValluCqB3S2VMLTbRt.tlre.'),
-
-(2,'Priscilla','$2a$10$GkEj.ZzmQa/aEfDmtLIh3udIH5fMphx/35d0EYeqZL5uzgCJ0lQRi'),
-
-(3,'Adrian','$2a$10$koGR7eS22Pv5KdaVJKDcge04ZB53iMiw76.UjHPY.XyVYlYqXnPbO');
-
-insert into distribuidora.rol (id_rol, nombre, id_usuario) values
-
- (1,'ROLE_ADMIN',1), (2,'ROLE_VENDEDOR',1), (3,'ROLE_USER',1),
-
- (4,'ROLE_VENDEDOR',2), (5,'ROLE_USER',2),
-
-(6,'ROLE_US
-
-CREATE DATABASE `distribuidora` ;
-
-drop user admin_123;
-
-create user 'admin_123'@'%' identified by 'administrador_1.';
-
-grant all privileges on distribuidora.* to 'admin_123'@'%';
-
-flush privileges;
-
-create user 'admin_123'@'%' identified by 'administrador_1.';
-
-CREATE TABLE distribuidora.carrito (
-
-  `id_carrito` int NOT NULL AUTO_INCREMENT,
-
-  `nombre` varchar(20) COLLATE utf8mb4_eo_0900_ai_ci NOT NULL,
-
-  `apellidos` varchar(30) COLLATE utf8mb4_eo_0900_ai_ci NOT NULL,
-
-  `producto` varchar(25) COLLATE utf8mb4_eo_0900_ai_ci DEFAULT NULL,
-
-  `precio` double NOT NULL,
-
-  PRIMARY KEY (`id_carrito`)
-
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_eo_0900_ai_ci;
-
-CREATE TABLE `distribuidora`.`catalogo` (
-
-  `idcatalogo` INT NOT NULL,
-
-  `Articulo` VARCHAR(45) NOT NULL);
-
-)
-
-CREATE TABLE distribuidora.consulta (
-
-  `id_consulta` int NOT NULL AUTO_INCREMENT,
-
-  `texto` varchar(45) NOT NULL,
-
-  PRIMARY KEY (`id_consulta`)
-
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
-CREATE TABLE distribuidora.pedido (
-
-  `id_pedido` int NOT NULL AUTO_INCREMENT,
-
-  `cliente` varchar(30) NOT NULL,
-
-  `monto` varchar(30) NOT NULL,
-
-  `estado_venta` varchar(30) NOT NULL,
-
-  `fecha` varchar(30) NOT NULL,
-
-  PRIMARY KEY (`id_pedido`)
-
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
-CREATE TABLE distribuidora.seguridad (
-
-  `id_seguridad` int NOT NULL AUTO_INCREMENT,
-
-  `nombre` varchar(20) COLLATE utf8mb4_eo_0900_ai_ci NOT NULL,
-
-  `apellidos` varchar(30) COLLATE utf8mb4_eo_0900_ai_ci NOT NULL,
-
-  `software` varchar(25) COLLATE utf8mb4_eo_0900_ai_ci DEFAULT NULL,
-
-  `producto` varchar(25) COLLATE utf8mb4_eo_0900_ai_ci DEFAULT NULL,
-
-  `precio` double NOT NULL,
-
-  PRIMARY KEY (`id_seguridad`)
-
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_eo_0900_ai_ci;
-
-CREATE TABLE distribuidora.venta (
-
-  `id_venta` int NOT NULL AUTO_INCREMENT,
-
-  `cliente` varchar(30) NOT NULL,
-
-  `monto` varchar(30) NOT NULL,
-
-  `fecha` varchar(30) NOT NULL,
-
-  PRIMARY KEY (`id_venta`)
-
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
-create table distribuidora.usuario(
-
-  id_usuario INT NOT NULL AUTO_INCREMENT,
-
-  username varchar(20),
-
-  password varchar(200),
-
-PRIMARY KEY (id_usuario)
-
-)ENGINE = InnoDB
-
-DEFAULT CHARACTER SET = utf8mb4
-
-COLLATE = utf8mb4_eo_0900_ai_ci;
-
- 
-
-create table distribuidora.rol (
-
-  id_rol INT NOT NULL AUTO_INCREMENT,
-
-  nombre varchar(20),
-
-  id_usuario int,
-
-  PRIMARY KEY (id_rol),
-
-  foreign key fk_rol_usuario (id_usuario) references usuario(id_usuario)
-
-)
-
-ENGINE = InnoDB
-
-DEFAULT CHARACTER SET = utf8mb4
-
-COLLATE = utf8mb4_eo_0900_ai_ci;
-
-insert into distribuidora.usuario (id_usuario, username, password) values
-
-(1,'Yeikel','$2a$10$P1.w58XvnaYQUQgZUCk4aO/RTRl8EValluCqB3S2VMLTbRt.tlre.'),
-
-(2,'Priscilla','$2a$10$GkEj.ZzmQa/aEfDmtLIh3udIH5fMphx/35d0EYeqZL5uzgCJ0lQRi'),
-
-(3,'Adrian','$2a$10$koGR7eS22Pv5KdaVJKDcge04ZB53iMiw76.UjHPY.XyVYlYqXnPbO');
-
-insert into distribuidora.rol (id_rol, nombre, id_usuario) values
-
- (1,'ROLE_ADMIN',1), (2,'ROLE_VENDEDOR',1), (3,'ROLE_USER',1),
-
- (4,'ROLE_VENDEDOR',2), (5,'ROLE_USER',2),
-
- (6,'ROLE_USER',3);
-
-ER',3);
+-- Creación de la base de datos distribuidora
+CREATE DATABASE Proyecto_Web_Distribuidora;
+
+-- Usar la base de datos distribuidora
+USE Proyecto_Web_Distribuidora;
+
+-- Tabla de usuarios
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    telefono VARCHAR(20),
+    contrasenia VARCHAR(64) NOT NULL -- Se utilizará SHA-256 hash (64 caracteres)
+);
+
+-- Tabla de artículos
+CREATE TABLE articulos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    descripcion TEXT,
+    precio DECIMAL(10, 2) NOT NULL,
+    UNIQUE KEY (precio)
+);
+
+-- Tabla de carrito de compras
+CREATE TABLE carrito (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT NOT NULL,
+    articulo_id INT NOT NULL,
+    cantidad INT NOT NULL,
+    articulo_precio DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
+    FOREIGN KEY (articulo_id) REFERENCES articulos(id),
+    FOREIGN KEY (articulo_precio) REFERENCES articulos(precio)
+);
+
+-- Tabla de compras
+CREATE TABLE compras (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT NOT NULL,
+    articulo_id INT NOT NULL,
+    cantidad INT NOT NULL,
+    articulo_precio DECIMAL(10, 2) NOT NULL,
+    fecha_compra DATE NOT NULL,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
+    FOREIGN KEY (articulo_id) REFERENCES articulos(id),
+    FOREIGN KEY (articulo_precio) REFERENCES articulos(precio)
+);
+
+-- Tabla de ventas
+CREATE TABLE ventas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT NOT NULL,
+    articulo_id INT NOT NULL,
+    cantidad INT NOT NULL,
+    articulo_precio DECIMAL(10, 2) NOT NULL,
+    fecha_venta DATE NOT NULL,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
+    FOREIGN KEY (articulo_id) REFERENCES articulos(id),
+    FOREIGN KEY (articulo_precio) REFERENCES articulos(precio)
+);
+
+
+-- Inserción de datos en la tabla usuarios
+INSERT INTO usuarios (nombre, email, telefono, contrasenia) VALUES
+    ('Admin', 'admin@gmail.com', '123456789', 'admin1234*'),
+    ('María López', 'maria@gmail.com', '987654321', 'maria1234*'),
+    ('Carlos Gómez', 'carlos@gmail.com', '555555555', 'carlos1234*');
+
+-- Inserción de datos en la tabla articulos
+INSERT INTO articulos (nombre, descripcion, precio) VALUES
+    ('Canasta Navideña', 'Canasta con productos navideños', 10000),
+    ('Queque Navideño', 'Queque Navideño Artesanal', 5000),
+    ('Pastel de Papa', 'Pastel de Papa con carne y chile', 6500);
+
+-- Inserción de datos en la tabla compras
+INSERT INTO compras (usuario_id, articulo_id, cantidad, articulo_precio, fecha_compra) VALUES
+    (2, 3, 1, 6500, '2023-07-31'),
+    (2, 1, 2, 10000, '2023-07-30'),
+    (3, 2, 3, 5000, '2023-07-29');
+
+-- Inserción de datos en la tabla ventas
+INSERT INTO ventas (usuario_id, articulo_id, cantidad, articulo_precio, fecha_venta) VALUES
+    (2, 3, 1, 6500, '2023-07-31'),
+    (2, 1, 2, 10000, '2023-07-30'),
+    (3, 2, 3, 5000, '2023-07-29');
