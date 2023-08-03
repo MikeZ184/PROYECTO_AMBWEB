@@ -5,13 +5,20 @@ CREATE DATABASE Proyecto_Web_Distribuidora;
 USE Proyecto_Web_Distribuidora;
 
 -- Tabla de usuarios
+-- CREATE TABLE usuarios (
+--     id INT AUTO_INCREMENT PRIMARY KEY,
+--     nombre VARCHAR(100) NOT NULL,
+--     email VARCHAR(100) NOT NULL,
+--     telefono VARCHAR(20),
+--     contrasenia VARCHAR(64) NOT NULL -- Se utilizará SHA-256 hash (64 caracteres)
+-- );
+
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    telefono VARCHAR(20),
-    contrasenia VARCHAR(64) NOT NULL -- Se utilizará SHA-256 hash (64 caracteres)
-);
+    apellido VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL
+    );
 
 -- Tabla de artículos
 CREATE TABLE articulos (

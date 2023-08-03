@@ -33,13 +33,13 @@
         <a href="/html/contacto.html">Contacto</a>
       </nav>
     </header>
-    <h2 class="white-text">Esperando conexion a Base De Datos...</h2>
+    <h2 class="white-text">Datos...</h2>
 
 
-    <form action="procesar-pedidos.php" method="get">
-        <button type="submit">Procesar datos de pedidos</button>
+    <?php
+    echo "hola"
 
-    </form>
+    ?>
     <!--  
     <table class="table table-styled">
       <thead>
@@ -77,3 +77,5 @@
   </body>
 
 </html>
+
+

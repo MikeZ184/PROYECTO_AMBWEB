@@ -1,3 +1,7 @@
+<?php
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,41 +40,26 @@
     <h2 class="white-text">Esperando conexion a Base De Datos...</h2>
 
 
-    <form action="procesar-pedidos.php" method="get">
-        <button type="submit">Procesar datos de pedidos</button>
+    <form action="../php/procesar-pedidos.php" method="POST">
+
+        <div>
+            <label for="nombre">Nombre:  </label>
+            <input type="text" id="nombre" name="nombre"  placeholder="Digita nombre">
+        </div>
+        <div>
+            <label for="apellido">Apellido:  </label>
+            <input type="text" id="apellido"name="apellido" placeholder="digita apellido">
+        </div>
+        <div>
+            <label for="correo">Correo:  </label>
+            <input type="email" id="correo" name="correo" placeholder="digita correo">
+        </div>
+
+        <button type="submit">Guardar datos</button>
+
 
     </form>
-    <!--  
-    <table class="table table-styled">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Apellido</th>
-          <th scope="col">Email</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Vacio</td>
-          <td>Vacio</td>
-          <td>Vacio</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Vacio</td>
-          <td>Vacio</td>
-          <td>Vacio</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Vacio</td>
-          <td>Vacio</td>
-        </tr>
-      </tbody>
-    </table>
-    -->
+    
     <footer class="footer">Proyecto Desarrollo Web</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
