@@ -1,3 +1,7 @@
+<?php
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,24 +17,24 @@
             <div class="row d-flex justify-content-center align-items-center h-auto">
                 <div class="col-md-3 col-lg-3 col-xl-2">
                     <a href="index.html">
-                        <img src="/img/Logo Proyecto.jpg" class="img-fluid" alt="Sample image">
+                        <img src="../img/Logo Proyecto.jpg" class="img-fluid" alt="Sample image">
                     </a>
                 </div>
                 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-                    <form>
+                    <form action="../php/procesar_login.php" method="POST">
                         <h2>Inicio Sesion</h2>
 
                         <!-- Email input -->
                         <div class="form-outline mb-4">
-                            <input type="email" id="form3Example3" class="form-control form-control-lg"
-                                placeholder="Ingresar Correo Electronico" />
-                            <label class="form-label" for="form3Example3"></label>
+                            <input type="email" id="correo" class="form-control form-control-lg"
+                                placeholder="Correo Electronico" />
+                            <label class="form-label" for="correo"></label>
                         </div>
                         <!-- Password input -->
                         <div class="form-outline mb-3">
-                            <input type="password" id="form3Example4" class="form-control form-control-lg"
-                                placeholder="Ingresar Contraseña" />
-                            <label class="form-label" for="form3Example4"></label>
+                            <input type="password" id="contrasena" class="form-control form-control-lg"
+                                placeholder="Contraseña" />
+                            <label class="form-label" for="contrasena"></label>
                         </div>
                         <div class="d-flex justify-content-between align-items-center">
                             <!-- Checkbox -->
@@ -43,7 +47,7 @@
                         <div class="text-center text-lg-start mt-4 pt-2">
                             <button type="button" class="btn btn-success btn-lg"
                                 style="padding-left: 2.5rem; padding-right: 2.5rem;">Continuar</button>
-                            <p class="small fw-bold mt-2 pt-1 mb-0">No tienes una cuenta? <a href="/html/registro.html"
+                            <p class="small fw-bold mt-2 pt-1 mb-0">No tienes una cuenta? <a href="../html/registroDB.php"
                                     class="link-danger">Registrarse</a></p>
                         </div>
                     </form>
@@ -59,10 +63,3 @@
 <footer class="footer">Proyecto Desarrollo Web</footer>
 
 </html>
-
-
-
-
-
- 
-

@@ -4,13 +4,14 @@ CREATE DATABASE Proyecto_Web_Distribuidora;
 -- Usar la base de datos distribuidora
 USE Proyecto_Web_Distribuidora;
 
--- Tabla de usuarios
+-- Tabla de usuarios // Usando HASH
 -- CREATE TABLE usuarios (
 --     id INT AUTO_INCREMENT PRIMARY KEY,
---     nombre VARCHAR(100) NOT NULL,
---     email VARCHAR(100) NOT NULL,
---     telefono VARCHAR(20),
---     contrasenia VARCHAR(64) NOT NULL -- Se utilizará SHA-256 hash (64 caracteres)
+--     nombre VARCHAR(50),
+--     apellido VARCHAR(50),
+--     correo VARCHAR(100) NOT NULL UNIQUE,
+--     contrasena VARCHAR(255) NOT NULL,
+--     hashed_password VARCHAR(255) NOT NULL
 -- );
 
 CREATE TABLE usuarios (
