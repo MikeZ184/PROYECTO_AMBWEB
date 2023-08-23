@@ -1,37 +1,3 @@
-- Descargar e instalar openssl
-https://kb.firedaemon.com/support/solutions/articles/4000121705#Download-OpenSSL
+- Se siguió el paso a paso sugerido por (Datogedon, 2021)
 
-- En cmd (como administrador)
-
-cd C:\Program Files\FireDaemon OpenSSL 3\bin
-openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365
-
-- Llear las preguntas en common name poner: distribuidoranochebuena.local, y el certificado y la key se generan en C:\Program Files\FireDaemon OpenSSL 3\bin
-
-- Inicio Apache desde el XAMMP
-
-- En Apache (En el archivo de configuración de Apache (httpd.conf) abriendolo como admin) en el IfModule ssl_module
-
-<IfModule ssl_module>
-SSLRandomSeed startup builtin
-SSLRandomSeed connect builtin
-<VirtualHost *:443>
-ServerName distribuidoranochebuena.local
-DocumentRoot C:\xampp\htdocs\PROYECTO_AMBWEB
-
-SSLEngine on
-SSLCertificateFile C:\Program Files\FireDaemon OpenSSL 3\bin\cert.pem
-SSLCertificateKeyFile C:\Program Files\FireDaemon OpenSSL 3\bin\key.pem
-</VirtualHost>
-</IfModule>
-
-- En C:\Windows\System32\drivers\etc\hosts (abrir como admin)
-
-127.0.0.1 distribuidoranochebuena.local
-
-- Listo! Para acceder: https://distribuidoranochebuena.local
-
-
--Comandos informativos
-openssl x509 -noout -subject -in C:\Program Files\FireDaemon OpenSSL 3\bin\cert.pem
-openssl x509 -noout -subject -in cert.pem
+Link: https://datogedon.com/wordpress/como-crear-ssl-valido-en-localhost-para-xampp-red-local/
