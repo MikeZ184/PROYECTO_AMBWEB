@@ -1,22 +1,35 @@
 <?php
-require_once '../DAL/productos.php';
+require_once '../DAL/usuarios.php';
 
-$idProducto = intval($_GET['idProducto']);
+$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+
+
+
+if ($id <= 0) {
+    // Si $id no es válido, puedes redirigir a una página de error o tomar alguna otra acción.
+    echo "ID no válido.";
+    exit;
+}
 
 // Llama a la función para obtener los datos del producto
-$producto = GetProductos($idProducto);
+$usuario = GetUsuarios($id);
 
 // Verifica si se encontró el producto
-if (!$producto) {
+if (!$usuario) {
     // Mostrar un mensaje de error en lugar de redireccionar
-    $error = "El producto no se encontró.";
+    $error = "El usuario no se encontró.";
     // Puedes personalizar este mensaje según tus necesidades.
 }
 
 // Variables para los datos del producto
-$nombre = isset($producto['nombre']) ? $producto['nombre'] : '';
-$descripcion = isset($producto['descripcion']) ? $producto['descripcion'] : '';
-$precio = isset($producto['precio']) ? $producto['precio'] : '';
+$nombre = isset($usuario['nombre']) ? $usuario['nombre'] : '';
+$apellido = isset($usuario['apellido']) ? $usuario['apellido'] : '';
+$email = isset($usuario['email']) ? $usuario['email'] : '';
+$password = isset($usuario['password']) ? $usuario['password'] : '';
+
+
+
+
 
 ?>
 <!DOCTYPE html>
@@ -39,9 +52,9 @@ $precio = isset($producto['precio']) ? $producto['precio'] : '';
                 </div>
                 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
 
-                <form action="actualizar-productos.php" method="POST">
-                        <h2>Productos</h2>
-                        <input type="hidden" name="idProducto" value="<?php echo $idProducto; ?>">
+                <form action="actualizar-usuarios.php" method="POST">
+                        <h2>Usuario</h2>
+                        <input type="hidden" name="id" value="<?php echo $id; ?>">
                         <div class="form-outline mb-4">
                         <input type="text" name="nombre" class="form-control form-control-lg"
                             placeholder="Nombre" value="<?php echo $nombre; ?>" />
@@ -49,21 +62,23 @@ $precio = isset($producto['precio']) ? $producto['precio'] : '';
                     </div>
 
                     <div class="form-outline mb-4">
-                        <input type="text" name="descripcion" class="form-control form-control-lg"
-                            placeholder="Descripcion" value="<?php echo $descripcion; ?>" />
-                        <label class="form-label" for="descripcion"></label>
+                        <input type="text" name="apellido" class="form-control form-control-lg"
+                            placeholder="Apellido" value="<?php echo $apellido; ?>" />
+                        <label class="form-label" for="apellido"></label>
                     </div>
 
                     <div class="form-outline mb-4">
-                        <input type="number" name="precio" class="form-control form-control-lg"
-                            placeholder="Precio" value="<?php echo $precio; ?>" />
-                        <label class="form-label" for="precio"></label>
+                        <input type="email" name="email" class="form-control form-control-lg"
+                            placeholder="Correo" value="<?php echo $email; ?>" />
+                        <label class="form-label" for="correo"></label>
                     </div>
+
+                
                         
                         <div class="text-center text-lg-start mt-4 pt-2">
                             <button type="submit" class="btn btn-success btn-lg"
                                 style="padding-left: 2.5rem; padding-right: 2.5rem;">Actualizar</button>
-                            <a href="../html/consulta-productos.php" class="btn btn-success btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Ver Productos</a>
+                            <a href="../html/consulta-datos.php" class="btn btn-success btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Ver Productos</a>
                         </div>
                     </form>
                 </div>

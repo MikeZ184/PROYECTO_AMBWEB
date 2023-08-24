@@ -42,8 +42,8 @@
                   Productos
                 </button>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Agregar Productos</a></li>
-                  <li><a class="dropdown-item" href="#">Administrar Productos</a></li>
+                  <li><a class="dropdown-item" href="../html/registroProductos.php">Agregar Productos</a></li>
+                  <li><a class="dropdown-item" href="../html/consulta-productos.php">Administrar Productos</a></li>
                 </ul>
               </div>
         </nav>
@@ -77,7 +77,7 @@
                         echo "<td>" . $producto['descripcion'] . "</td>";
                         echo "<td>" . $producto['precio'] . "</td>";
                         echo "<td><a class='btn btn-danger' href='eliminar-producto.php?idProducto=" . $producto['idProducto'] . "'>Eliminar</a></td>";
-                        echo "<td><a class='btn btn-danger' href=form_actualizarProdutos.php >Actualizar</a></td>";
+                        echo "<td><a class='btn btn-danger' href='form_actualizarProductos.php?idProducto=" . $producto['idProducto'] . "'>Actualizar</a></td>";
                         echo "</tr>";
                     }
                 } else {

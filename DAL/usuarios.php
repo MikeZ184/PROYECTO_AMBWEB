@@ -3,7 +3,7 @@
 require_once "conexion.php";
 
 // Verificar si se recibió la solicitud de eliminación por AJAX
-if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["idUsuario"])) {
+/* if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["idUsuario"])) {
     $idUsuario = $_POST["idUsuario"];
     $resultado = deleteUsuario($idUsuario);
 
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["idUsuario"])) {
 
     // Terminar la ejecución del archivo, ya que no se necesita más procesamiento
     exit;
-}
+} */
 
 function InsercionUsuario($pNombre, $pApellido, $pCorreo, $pPassword) {
     $retorno = false;
@@ -92,6 +92,75 @@ function ValidarUsuario($correo, $password) {
     return false; // En caso de error o credenciales incorrectas
 }
 
+function GetUsuarios($id) {
+    try {
+        $conexion = Conecta();
+
+        // Formato de datos utf8
+        mysqli_set_charset($conexion, "utf8");
+
+        $stmt = $conexion->prepare("SELECT id, nombre, apellido, email, password FROM usuarios WHERE id = ?");
+        $stmt->bind_param("i", $id);
+
+        if ($stmt->execute()) {
+            $resultado = $stmt->get_result();
+        
+            if ($resultado->num_rows === 0) {
+                return []; // No se encontraron resultados
+            }
+        
+            $usuario = $resultado->fetch_assoc();
+            $stmt->close(); // Cerrar la sentencia preparada
+        
+            return $usuario;
+        } else {
+            echo "Error en la ejecución de la consulta: " . $stmt->error;
+        }
+        
+    } catch (\Throwable $th) {
+        // Registrar el error en un archivo de registro o mostrar un mensaje de error
+        error_log("Error en GetProductos: " . $th->getMessage());
+    } finally {
+        Desconecta($conexion);
+    }
+
+    return null; // En caso de error
+}
+
+function updateUsuario($id, $pNombre, $pApellido, $pEmail) {
+    $retorno = false;
+
+    try {
+        $conexion = Conecta();
+
+        // Formato de datos utf8
+        mysqli_set_charset($conexion, "utf8");
+
+        $stmt = $conexion->prepare("UPDATE usuarios SET nombre = ?, apellido = ?, email = ? WHERE id = ?");
+        $stmt->bind_param("sssi", $iNombre, $iApellido, $iEmail, $id);
+
+        // Setear los valores de los parámetros
+        $iNombre = $pNombre;
+        $iApellido = $pApellido;
+        $iEmail = $pEmail;
+
+        if ($stmt->execute()) {
+            $retorno = true;
+        } else {
+            echo "Error en la actualización: " . $stmt->error;
+        }
+
+        $stmt->close(); // Cerrar el statement
+
+    } catch (\Throwable $th) {
+        // Manejar excepciones
+
+    } finally {
+        Desconecta($conexion);
+    }
+
+    return $retorno;
+}
 
 
 

@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Distribuidora Noche Buena</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/indexAdmin.css">
-    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
-</head>
-
-<body>
-
-    <header>
+<header>
         <div class="logo">
             <a href="index.html" class="active">
                 <img src="../img/log.png" alt="Logo de la página">
@@ -42,7 +28,7 @@
                   Productos
                 </button>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Agregar Productos</a></li>
+                  <li><a class="dropdown-item" href="../html/registroProductos.php">Agregar Productos</a></li>
                   <li><a class="dropdown-item" href="../html/consulta-productos.php">Administrar Productos</a></li>
                 </ul>
               </div>
@@ -51,18 +37,3 @@
         </nav>
 
     </header>
-
-    <div class="hero-section">
-        <h1 class="titulo">Bienvenidos a</h1>
-        <h1 class="titulo2">Distribuidora Noche Buena</h1>
-    </div>
-
-    <footer>
-        <p>&copy; 2023 Distribuidora Noche Buena. Todos los derechos reservados.</p>
-    </footer>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-</body>
-
-</html>
