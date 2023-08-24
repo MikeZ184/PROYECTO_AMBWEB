@@ -23,7 +23,7 @@ CREATE TABLE usuarios (
 
 -- Tabla de artículos
 CREATE TABLE articulos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    idProducto INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
     descripcion TEXT,
     precio DECIMAL(10, 2) NOT NULL,
