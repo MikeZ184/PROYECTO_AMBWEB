@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $idFactura = $_POST['idFactura']; // Recuperar el idProducto oculto
     $nombre = $_POST['nombre'];
     $descripcion = $_POST['descripcion'];
-    $precio = $_POST['monto'];
+    $monto = $_POST['monto'];
 
     // Llama a la función updateProducto
     require_once '../DAL/facturas.php';
@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($resultado) {
         // Redirigir a consulta-productos.php si la actualización fue exitosa
-        header('Location: consulta_facturas.php');
+        header('Location: consulta-facturas.php');
         exit;
     } else {
         // Manejar el error de actualización

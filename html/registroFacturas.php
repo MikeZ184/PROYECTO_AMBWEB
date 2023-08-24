@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar Productos</title>
+    <title>Agregar Facturas</title>
     <link rel="stylesheet" href="../css/registroFacturas.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -23,7 +23,7 @@
                 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
 
                     <form action="../php/procesar_facturas.php" method="POST">
-                        <h2>Productos</h2>
+                        <h2>Facturas</h2>
                         <div class="form-outline mb-4">
                             <input type="text" name="nombre" class="form-control form-control-lg"
                                 placeholder="Nombre" />
@@ -45,7 +45,7 @@
                         <div class="text-center text-lg-start mt-4 pt-2">
                             <button type="submit" class="btn btn-success btn-lg"
                                 style="padding-left: 2.5rem; padding-right: 2.5rem;">Agregar</button>
-                            <a href="../html/consulta-productos.php" class="btn btn-success btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Ver Facturas</a>
+                            <a href="../html/consulta-facturas.php" class="btn btn-success btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Ver Facturas</a>
                         </div>
                     </form>
                 </div>

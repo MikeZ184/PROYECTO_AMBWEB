@@ -18,6 +18,7 @@
                     <th>Apellido</th>
                     <th>Email</th>
                     <th>Acciones</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -36,7 +37,8 @@
                         echo "<td>" . $usuario['apellido'] . "</td>";
                         echo "<td>" . $usuario['email'] . "</td>";
                         echo "<td><a class='btn btn-danger' href='eliminar-usuario.php?id=" . $usuario['id'] . "'>Eliminar</a></td>";
-                        echo "<td><a class='btn btn-danger' href='formActualizarUsuarios.php?id=" . $usuario['id'] . "'>Actualizar</a></td>";
+                        echo "<td><a class='btn btn-primary btn-lg' style='padding-left: 2.5rem; padding-right: 2.5rem;' href='formActualizarUsuarios.php?id=" . $usuario['id'] . "'>Actualizar</a></td>";
+
                         echo "</tr>";
                     }
                 } else {
@@ -51,7 +53,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <?php include '../include/templates/footer.php'; ?>
+    
     
 </body>
+<footer class="footer">Proyecto Desarrollo Web</footer>
 </html>

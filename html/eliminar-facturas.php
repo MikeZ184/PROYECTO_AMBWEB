@@ -9,7 +9,7 @@ if (isset($_GET['idFactura'])) {
 
     if ($resultado) {
         // Redirigir a consulta-datos.php si la eliminación fue exitosa
-        header('Location: consulta_facuras.php');
+        header('Location: consulta-facturas.php');
         exit;
     } else {
         // Manejar el error de eliminación
@@ -18,7 +18,7 @@ if (isset($_GET['idFactura'])) {
     }
 } else {
     // Si no se proporcionó el ID del usuario, redirigir a consulta-datos.php
-    header('Location: consulta_facturas.php');
+    header('Location: consulta-facturas.php');
     exit;
 }
 ?>

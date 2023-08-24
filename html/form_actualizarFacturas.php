@@ -2,7 +2,7 @@
 require_once '../DAL/facturas.php';
 
 $idFactura = intval($_GET['idFactura']);
-
+echo $idFactura;
 // Llama a la función para obtener los datos del producto
 $factura = GetFacturas($idFactura);
 
@@ -16,15 +16,15 @@ if (!$factura) {
 // Variables para los datos del producto
 $nombre = isset($factura['nombre']) ? $factura['nombre'] : '';
 $descripcion = isset($factura['descripcion']) ? $factura['descripcion'] : '';
-$precio = isset($factura['monto']) ? $factura['monto'] : '';
-
+$monto = isset($factura['monto']) ? $factura['monto'] : '';
+echo $nombre;
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actualizar Productos</title>
+    <title>Actualizar Facturas</title>
     <link rel="stylesheet" href="../css/registroFacturas.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -39,8 +39,8 @@ $precio = isset($factura['monto']) ? $factura['monto'] : '';
                 </div>
                 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
 
-                <form action="actualizar_facturas.php" method="POST">
-                        <h2>Productos</h2>
+                <form action="actualizar-facturas.php" method="POST">
+                        <h2>Facturas</h2>
                         <input type="hidden" name="idFactura" value="<?php echo $idFactura; ?>">
                         <div class="form-outline mb-4">
                         <input type="text" name="nombre" class="form-control form-control-lg"
@@ -63,7 +63,7 @@ $precio = isset($factura['monto']) ? $factura['monto'] : '';
                         <div class="text-center text-lg-start mt-4 pt-2">
                             <button type="submit" class="btn btn-success btn-lg"
                                 style="padding-left: 2.5rem; padding-right: 2.5rem;">Actualizar</button>
-                            <a href="../html/consulta_facturas.php" class="btn btn-success btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Ver Facturas</a>
+                            <a href="../html/consulta-facturas.php" class="btn btn-success btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Ver Facturas</a>
                         </div>
                     </form>
                 </div>

@@ -2,21 +2,6 @@
 
 require_once "conexion.php";
 
-// Verificar si se recibió la solicitud de eliminación por AJAX
-/* if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["idProducto"])) {
-    $idUsuario = $_POST["idProducto"];
-    $resultado = deleteProducto($idProducto);
-
-    // Devolver una respuesta a la solicitud AJAX
-    if ($resultado) {
-        echo "success";
-    } else {
-        echo "error";
-    }
-
-    // Terminar la ejecución del archivo, ya que no se necesita más procesamiento
-    exit;
-} */
 
 function InsercionFactura($pNombre, $pDescripcion, $pMonto) {
     $retorno = false;
@@ -46,7 +31,6 @@ function InsercionFactura($pNombre, $pDescripcion, $pMonto) {
     }finally{
         Desconecta($conexion);
     }
-
     return $retorno;
 
 }
@@ -63,8 +47,8 @@ function ReturnFacturas() {
 
         if ($stmt->execute()) {
             $resultado = $stmt->get_result();
-            $productos = $resultado->fetch_all(MYSQLI_ASSOC);
-            return $productos;
+            $facturas = $resultado->fetch_all(MYSQLI_ASSOC);
+            return $facturas;
         }
     } catch (\Throwable $th) {
         //throw $th;
@@ -83,8 +67,8 @@ function GetFacturas($idFactura) {
         // Formato de datos utf8
         mysqli_set_charset($conexion, "utf8");
 
-        $stmt = $conexion->prepare("SELECT idFactura, nombre, descripcion, monto FROM facturas WHERE idFacturas =?");
-        $stmt->bind_param("i", $idProducto);
+        $stmt = $conexion->prepare("SELECT idFactura, nombre, descripcion, monto FROM facturas WHERE idFactura = ?");
+        $stmt->bind_param("i", $idFactura);
 
         if ($stmt->execute()) {
             $resultado = $stmt->get_result();
@@ -94,14 +78,14 @@ function GetFacturas($idFactura) {
                 return [];
             }
 
-            $productos = $resultado->fetch_assoc();
+            $facturas = $resultado->fetch_assoc();
             $stmt->close(); // Cerrar la sentencia preparada
 
-            return $productos;
+            return $facturas;
         }
     } catch (\Throwable $th) {
         // Registrar el error en un archivo de registro o mostrar un mensaje de error
-        error_log("Error en GetProductos: " . $th->getMessage());
+        error_log("Error en GetFacturas: " . $th->getMessage());
     } finally {
         Desconecta($conexion);
     }
@@ -150,7 +134,7 @@ function updateFactura($idFactura, $pNombre, $pDescripcion, $pMonto) {
         // Setear los valores de los parámetros
         $iNombre = $pNombre;
         $iDescripcion = $pDescripcion;
-        $iPrecio = $pPrecio;
+        $iMonto = $pMonto;
 
         if ($stmt->execute()) {
             $retorno = true;

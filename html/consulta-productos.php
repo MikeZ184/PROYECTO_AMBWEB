@@ -59,6 +59,8 @@
                     <th>Nombre</th>
                     <th>Descripcion</th>
                     <th>Precio</th>
+                    <th>Acciones</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -77,7 +79,7 @@
                         echo "<td>" . $producto['descripcion'] . "</td>";
                         echo "<td>" . $producto['precio'] . "</td>";
                         echo "<td><a class='btn btn-danger' href='eliminar-producto.php?idProducto=" . $producto['idProducto'] . "'>Eliminar</a></td>";
-                        echo "<td><a class='btn btn-danger' href='form_actualizarProductos.php?idProducto=" . $producto['idProducto'] . "'>Actualizar</a></td>";
+                        echo "<td><a class='btn btn-primary btn-lg' style='padding-left: 2.5rem; padding-right: 2.5rem;' href='form_actualizarProductos.php?idProducto=" . $producto['idProducto'] . "'>Actualizar</a></td>";
                         echo "</tr>";
                     }
                 } else {
@@ -88,9 +90,7 @@
         </table>
     </div>
 
-    <footer>
-        <p>&copy; 2023 Distribuidora Noche Buena. Todos los derechos reservados.</p>
-    </footer>
+    <footer class="footer">Proyecto Desarrollo Web</footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>

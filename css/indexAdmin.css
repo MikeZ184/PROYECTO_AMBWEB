@@ -1,129 +1,118 @@
 /* Estilos generales */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url("../img/uvas.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center; /* Centra la imagen en el cuerpo */
-  }
-  
-  body.hero-background {
-    
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  /* Estilos para el encabezado */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #417558;
-    color: white;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    height: 50px;
-    margin-right: 10px;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .navbar a {
-    text-decoration: none;
-    color: white;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .navbar a:hover {
-    background-color: #b9b9b9;
-  }
-  
-  /* Estilos para el contenido principal */
-  .hero-section {
-    text-align: center;
-    padding: 250px 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
-  }
-  
-  .titulo {
-    font-size: 36px;
-    margin: 0;
-  }
-  
-  .titulo2 {
-    font-size: 48px;
-    margin: 0;
-  }
-  
-  /* Estilos para el pie de página */
-  .footer{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("../img/uvas.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el contenido al menos ocupe el 100% del viewport */
+}
 
- 
+body.hero-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-    padding: 20px;
+.hero-section {
+  text-align: center;
+  padding: 350px 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
 
-    margin-top: 50px;
+/* Estilos para el encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #417558;
+  color: white;
+}
 
-    background-color: #417558;
+.logo {
+  display: flex;
+  align-items: center;
+}
 
-    display: flex;
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
 
-    justify-content: end;
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    color: aliceblue;
+.navbar a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
 
- 
+.navbar a:hover {
+  background-color: #b9b9b9;
+}
 
-  }
-  .dropdown{
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-    margin-right: 100px;
+/* Estilos para el contenido principal */
+.titulo {
+  font-size: 36px;
+  margin: 0;
+}
 
-  }
-  .navbar .dropdown .btn {
-    background-color: #417558; 
-    color: white;
-    border: none;
-  }
-  
-  
-  .navbar .dropdown .btn:hover {
-    background-color: #6fa97e; 
-  }
-  
-  .navbar .dropdown-menu a.dropdown-item:hover {
-    background-color: #417558; 
-  }
-  
-  .navbar .dropdown-menu {
-    background-color: rgb(124, 101, 90); 
-    max-height: 330px; 
-    padding: 12px; 
-    
-  }
-  
-  .navbar .dropdown-menu a.dropdown-item:hover {
-    background-color: rgb(124, 101, 90); 
-  }
+.titulo2 {
+  font-size: 48px;
+  margin: 0;
+}
+
+/* Estilos para el dropdown */
+.dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  margin-right: 100px;
+}
+
+.navbar .dropdown .btn {
+  background-color: #417558;
+  color: white;
+  border: none;
+}
+
+.navbar .dropdown .btn:hover {
+  background-color: #6fa97e;
+}
+
+.navbar .dropdown-menu a.dropdown-item:hover {
+  background-color: #417558;
+}
+
+.navbar .dropdown-menu {
+  background-color: rgb(124, 101, 90);
+  max-height: 330px;
+  padding: 12px;
+}
+
+.navbar .dropdown-menu a.dropdown-item:hover {
+  background-color: rgb(124, 101, 90);
+}
+
+/* Estilos para el pie de página */
+.footer {
+  background-color: #417558;
+  padding: 45px;
+  text-align: center;
+  color: white;
+  margin-top: auto; /* Empuja el pie de página al final */
+}

@@ -35,8 +35,8 @@
 
         echo "Registro exitoso";
 
-        if(InsercionProducto($nombre, $descripcion, $monto)){
-            header("Location: ../html/consulta_facturas.php");
+        if(InsercionFactura($nombre, $descripcion, $monto)){
+            header("Location: ../html/consulta-facturas.php");
 
         }else{
             echo "Error!";

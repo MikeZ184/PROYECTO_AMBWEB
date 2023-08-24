@@ -23,6 +23,12 @@
                 </ul>
               </div>
 
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../html/registroFacturas.php">Agregar Facturas</a></li>
+                  <li><a class="dropdown-item" href="../html/consulta-facturas.php">Administrar Facturas</a></li>
+                </ul>
+              </div>
+
               <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Productos
