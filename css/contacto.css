@@ -116,7 +116,7 @@ header div img {
 .face h2 {
   color: #299e42;
   display: flex;
-  justify-content: center;
+  justify-content: column;
 }
 
 /* Estilos para la imagen de fondo */
@@ -156,4 +156,31 @@ h2 {
   justify-content: center;
   color: aliceblue;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.redes .linea {
+  display: flex;
+  height: auto; /* Cambiado de 100vh a auto */
+  margin: 0 20px;
+}
+
+
+/* Espacio entre contenedores */
+.redes + .redes {
+  margin-top: 140px; /* Añadido espacio entre contenedores */
+}
+
 
