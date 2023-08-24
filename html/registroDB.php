@@ -21,30 +21,35 @@
                     </a>
                 </div>
                 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-                    <form action="../php/procesar-pedidos.php" method="POST">
+
+                    <form action="../php/procesar-registros.php" method="POST">
                         <h2>Registrarse</h2>
                         <div class="form-outline mb-4">
-                            <input type="text" id="nombre" class="form-control form-control-lg"
+                            <input type="text" name="nombre" class="form-control form-control-lg"
                                 placeholder="Nombre" />
                             <label class="form-label" for="nombre"></label>
                         </div>
+
                         <div class="form-outline mb-4">
-                            <input type="text" id="apellido" class="form-control form-control-lg"
+                            <input type="text" name="apellido" class="form-control form-control-lg"
                                 placeholder="Apellido" />
                             <label class="form-label" for="apellido"></label>
                         </div>
+
                         <div class="form-outline mb-4">
-                            <input type="email" id="correo" class="form-control form-control-lg"
+                            <input type="email" name="correo" class="form-control form-control-lg"
                                 placeholder="Correo" />
                             <label class="form-label" for="correo"></label>
                         </div>
+
                         <div class="form-outline mb-4">
-                            <input type="password" id="contrasena" class="form-control form-control-lg"
-                                placeholder="Contraseña" />
-                            <label class="form-label" for="contrasena"></label>
+                            <input type="password" name="password" class="form-control form-control-lg"
+                                placeholder="Password" />
+                            <label class="form-label" for="password"></label>
                         </div>
+                        
                         <div class="text-center text-lg-start mt-4 pt-2">
-                            <button type="button" class="btn btn-success btn-lg"
+                            <button type="submit" class="btn btn-success btn-lg"
                                 style="padding-left: 2.5rem; padding-right: 2.5rem;">Registrarse</button>
                             <p class="small fw-bold mt-2 pt-1 mb-0">Ya tienes una cuenta? <a href="../html/inicioSesion.php"
                                     class="link-danger">Iniciar Sesión</a></p>

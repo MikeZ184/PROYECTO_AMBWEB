@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["idUsuario"])) {
     exit;
 }
 
-function InsercionUsuario($pNombre, $pApellido, $pCorreo) {
+function InsercionUsuario($pNombre, $pApellido, $pCorreo, $pPassword) {
     $retorno = false;
 
     try {
@@ -26,13 +26,14 @@ function InsercionUsuario($pNombre, $pApellido, $pCorreo) {
 
         //formato de datos utf8
         if(mysqli_set_charset($conexion, "utf8")){
-            $stmt = $conexion->prepare("INSERT INTO usuarios(nombre, apellido, email) values (?, ?, ?)");
-            $stmt->bind_param("sss", $iNombre, $iApellido, $iCorreo);
+            $stmt = $conexion->prepare("INSERT INTO usuarios(nombre, apellido, email, password) values (?, ?, ?, ?)");
+            $stmt->bind_param("ssss", $iNombre, $iApellido, $iCorreo, $iPassword);
 
             //set parametros y ejecutar
             $iNombre = $pNombre;
             $iApellido = $pApellido;
             $iCorreo = $pCorreo;
+            $iPassword = $pPassword;
 
             if($stmt->execute()){
                 $retorno = true;
@@ -51,6 +52,45 @@ function InsercionUsuario($pNombre, $pApellido, $pCorreo) {
     return $retorno;
 
 }
+
+function ValidarUsuario($correo, $password) {
+    try {
+        $conexion = Conecta();
+
+        if (!$conexion) {
+            die("Error de conexión a la base de datos.");
+        }
+
+        // Formato de datos utf8
+        mysqli_set_charset($conexion, "utf8");
+
+        // Realiza la consulta SQL para verificar las credenciales
+        $stmt = $conexion->prepare("SELECT * FROM usuarios WHERE email = ?");
+        $stmt->bind_param("s", $correo);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+        $usuario = $resultado->fetch_assoc();
+
+        if ($usuario && password_verify($password, $usuario["password"])) {
+            // Las credenciales son correctas
+            return true;
+        } else {
+            // Las credenciales son incorrectas
+            return false;
+        }
+    } catch (\Throwable $th) {
+        // Manejar tema de bitácora Apache o registrar el error en un archivo
+        die("Error: " . $th->getMessage());
+    } finally {
+        Desconecta($conexion);
+    }
+
+    return false; // En caso de error o credenciales incorrectas
+}
+
+
+
+
 /*
 function ReturnUsuario(){
     $retorno = "";

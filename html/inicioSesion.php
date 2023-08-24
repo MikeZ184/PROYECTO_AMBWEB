@@ -26,13 +26,13 @@
 
                         <!-- Email input -->
                         <div class="form-outline mb-4">
-                            <input type="email" id="correo" class="form-control form-control-lg"
+                            <input type="email" name="correo" class="form-control form-control-lg"
                                 placeholder="Correo Electronico" />
                             <label class="form-label" for="correo"></label>
                         </div>
                         <!-- Password input -->
                         <div class="form-outline mb-3">
-                            <input type="password" id="contrasena" class="form-control form-control-lg"
+                            <input type="password" name="password" class="form-control form-control-lg"
                                 placeholder="Contraseña" />
                             <label class="form-label" for="contrasena"></label>
                         </div>
@@ -45,7 +45,7 @@
                             <a href="#!" class="text-body">Olvido su contraseña?</a>
                         </div>
                         <div class="text-center text-lg-start mt-4 pt-2">
-                            <button type="button" class="btn btn-success btn-lg"
+                            <button type="submit" class="btn btn-success btn-lg"
                                 style="padding-left: 2.5rem; padding-right: 2.5rem;">Continuar</button>
                             <p class="small fw-bold mt-2 pt-1 mb-0">No tienes una cuenta? <a href="../html/registroDB.php"
                                     class="link-danger">Registrarse</a></p>

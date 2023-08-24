@@ -4,10 +4,10 @@
     $nombre = recogePost("nombre");
     $apellido = recogePost("apellido");
     $correo = recogePost("correo");
-    $contrasena = recogePost("contrasena");
+    $hashed_password = recogePost("password");
 
     // Generar el hash de la contraseña // Ver con Mike
-    $hashed_password = password_hash($contrasena, PASSWORD_DEFAULT);
+    //$hashed_password = password_hash($hashed_password, PASSWORD_DEFAULT);
 
     $nombreOK = false;
     $apellidoOK = false;
@@ -32,19 +32,21 @@
         $correoOK = true;
     }
 
-    if($contrasena === ""){
+    if($hashed_password === ""){
         $errores[] = "No digito la contraseña";
     }else{
-        $contrasenaOK = true;
+        $hashed_passwordOK = true;
     }
 
-    if($nombreOK && $apellidoOK && $correoOK && $contrasenaOK){
+    if($nombreOK && $apellidoOK && $correoOK && $hashed_passwordOK){
         //ingresar los datos a base de datos
         require_once '../DAL/usuarios.php';
+        var_dump($nombre, $apellido, $correo, $hashed_password);
+
 
         echo "Registro exitoso";
 
-        if(InsercionUsuario($nombre, $apellido, $correo)){
+        if(InsercionUsuario($nombre, $apellido, $correo, $hashed_password)){
             header("Location: ../html/inicioSesion.php");
 
         }else{
