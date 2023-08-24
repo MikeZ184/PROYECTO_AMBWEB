@@ -73,13 +73,25 @@ body {
   }
   
   /* Estilos para el pie de página */
-  footer {
-    background-color: #417558;
-    padding: 20px;
-    text-align: center;
-    color: white;
-  }
+  .footer{
 
+ 
+
+    padding: 20px;
+
+    margin-top: 50px;
+
+    background-color: #417558;
+
+    display: flex;
+
+    justify-content: end;
+
+    color: aliceblue;
+
+ 
+
+  }
   .dropdown{
   
     display: flex;
@@ -89,4 +101,29 @@ body {
     color: black;
     margin-right: 100px;
 
+  }
+  .navbar .dropdown .btn {
+    background-color: #417558; 
+    color: white;
+    border: none;
+  }
+  
+  
+  .navbar .dropdown .btn:hover {
+    background-color: #6fa97e; 
+  }
+  
+  .navbar .dropdown-menu a.dropdown-item:hover {
+    background-color: #417558; 
+  }
+  
+  .navbar .dropdown-menu {
+    background-color: rgb(124, 101, 90); 
+    max-height: 330px; 
+    padding: 12px; 
+    
+  }
+  
+  .navbar .dropdown-menu a.dropdown-item:hover {
+    background-color: rgb(124, 101, 90); 
   }
