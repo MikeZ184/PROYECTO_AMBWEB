@@ -32,11 +32,11 @@
                 if ($productos) {
                     foreach ($productos as $producto) {
                         echo "<tr>";
-                        echo "<td>" . $producto['id'] . "</td>";
+                        echo "<td>" . $producto['idProducto'] . "</td>";
                         echo "<td>" . $producto['nombre'] . "</td>";
                         echo "<td>" . $producto['descripcion'] . "</td>";
                         echo "<td>" . $producto['precio'] . "</td>";
-                        echo "<td><a class='btn btn-danger' href='eliminar-producto.php?id=" . $producto['idProducto'] . "'>Eliminar</a></td>";
+                        echo "<td><a class='btn btn-danger' href='eliminar-producto.php?idProducto=" . $producto['idProducto'] . "'>Eliminar</a></td>";
                         echo "</tr>";
                     }
                 } else {

@@ -27,7 +27,7 @@ function InsercionProducto($pNombre, $pDescripcion, $pPrecio) {
         //formato de datos utf8
         if(mysqli_set_charset($conexion, "utf8")){
             $stmt = $conexion->prepare("INSERT INTO productos(nombre, descripcion, precio) values (?, ?, ?)");
-            $stmt->bind_param("ssss", $iNombre, $iDescripcion, $iPrecio);
+            $stmt->bind_param("sss", $iNombre, $iDescripcion, $iPrecio);
 
             //set parametros y ejecutar
             $iNombre = $pNombre;

@@ -7,7 +7,7 @@
     $hashed_password = recogePost("password");
 
     // Generar el hash de la contraseña // Ver con Mike
-    //$hashed_password = password_hash($hashed_password, PASSWORD_DEFAULT);
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     $nombreOK = false;
     $apellidoOK = false;

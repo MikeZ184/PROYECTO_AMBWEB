@@ -5,6 +5,8 @@
     $correo = recogePost("correo");
     $hashed_password = recogePost("password");
 
+    $hashed_password = password_hash($hashed_password, PASSWORD_DEFAULT);
+
     $correoOK = false;
     $hashed_passwordOK = false;
 
@@ -28,8 +30,14 @@
         echo "Registro exitoso";
         
 
-        if(ValidarUsuario($correo, $hashed_password)){
-            header("Location: ../html/index.html");
+        if(ValidarUsuario($correo, $password)){
+            if ($correo === "admin@gmail.com") {
+                // Redirecciona a indexAdmin.html
+                header("Location: ../html/indexAdmin.html");
+            } else {
+                // Redirecciona a index.html
+                header("Location: ../html/index.html");
+            }
 
         }else{
             echo "Error!";

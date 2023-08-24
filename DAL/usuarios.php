@@ -71,6 +71,10 @@ function ValidarUsuario($correo, $password) {
         $resultado = $stmt->get_result();
         $usuario = $resultado->fetch_assoc();
 
+        // Aquí puedes imprimir las contraseñas
+        echo "Contraseña almacenada: " . $usuario["password"];
+        echo "Contraseña proporcionada: " . $password;
+
         if ($usuario && password_verify($password, $usuario["password"])) {
             // Las credenciales son correctas
             return true;
@@ -87,6 +91,7 @@ function ValidarUsuario($correo, $password) {
 
     return false; // En caso de error o credenciales incorrectas
 }
+
 
 
 
